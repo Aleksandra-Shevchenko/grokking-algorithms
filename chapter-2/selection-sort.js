@@ -11,6 +11,7 @@ const array = [
 ];
 
 // Вариант приближенный к книжному
+// сложность O(n*n)
 
 function findSmallest(arr) {
   let smallest = arr[0]; // для хранения наименьшего значения
@@ -31,7 +32,7 @@ function selectionSort(arr) { // сортируем массив
   const newArr = [];
   
   for (let i = 0; i < length; i++) {
-    let smallestIndex = findSmallest(arr);  // находим наименьший элемент в массиве, 
+    const smallestIndex = findSmallest(arr);  // находим наименьший элемент в массиве, 
     newArr.push(arr.splice(smallestIndex, 1)[0]); // вырезаем его и добавляем в новый массив
   }
   
